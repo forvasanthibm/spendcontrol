@@ -1,0 +1,15 @@
+---
+apiVersion: v1
+kind: List
+items:
+- apiVersion: image.openshift.io/v1
+  kind: ImageStream
+  metadata:
+    name: fabric8-maven-sample-zero-config
+  spec:
+    tags:
+    - from:
+        kind: ImageStreamImage
+        name: fabric8-maven-sample-zero-config@sha256:a2dbc6a17fac36d129db74502ae174b534f624d1c307cee0b0e58ed5d53cb55e
+        namespace: myproject
+      name: 4.3.1

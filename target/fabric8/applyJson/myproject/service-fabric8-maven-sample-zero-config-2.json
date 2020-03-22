@@ -1,0 +1,44 @@
+{
+  "apiVersion" : "v1",
+  "kind" : "Service",
+  "metadata" : {
+    "annotations" : {
+      "fabric8.io/scm-tag" : "HEAD",
+      "fabric8.io/scm-url" : "https://github.com/spring-projects/spring-boot/spring-boot-starter-parent/fabric8-maven-sample-zero-config",
+      "prometheus.io/port" : "9779",
+      "prometheus.io/scrape" : "true"
+    },
+    "creationTimestamp" : "2020-03-22T14:42:34Z",
+    "labels" : {
+      "app" : "fabric8-maven-sample-zero-config",
+      "expose" : "true",
+      "group" : "io.fabric8",
+      "provider" : "fabric8",
+      "version" : "4.3.1"
+    },
+    "name" : "fabric8-maven-sample-zero-config",
+    "namespace" : "myproject",
+    "resourceVersion" : "8560",
+    "selfLink" : "/api/v1/namespaces/myproject/services/fabric8-maven-sample-zero-config",
+    "uid" : "5e20e591-6c4b-11ea-b381-00155d02ec07"
+  },
+  "spec" : {
+    "clusterIP" : "172.30.181.162",
+    "ports" : [ {
+      "name" : "http",
+      "port" : 8080,
+      "protocol" : "TCP",
+      "targetPort" : 8080
+    } ],
+    "selector" : {
+      "app" : "fabric8-maven-sample-zero-config",
+      "group" : "io.fabric8",
+      "provider" : "fabric8"
+    },
+    "sessionAffinity" : "None",
+    "type" : "ClusterIP"
+  },
+  "status" : {
+    "loadBalancer" : { }
+  }
+}
